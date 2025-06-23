@@ -7,7 +7,7 @@
         <div class="card border-0 zoom-in bg-primary-subtle shadow-none">
           <div class="card-body">
             <div class="text-center">
-              <img src="./assets/images/svgs/icon-user-male.svg" width="50" height="50" class="mb-3" alt="modernize-img" />
+              <img src="{{asset('assets/backend/images/svgs/icon-user-male.svg')}}" width="50" height="50" class="mb-3" alt="modernize-img" />
               <p class="fw-semibold fs-3 text-primary mb-1">
                 Employees
               </p>
@@ -20,7 +20,7 @@
         <div class="card border-0 zoom-in bg-warning-subtle shadow-none">
           <div class="card-body">
             <div class="text-center">
-              <img src="./assets/images/svgs/icon-briefcase.svg" width="50" height="50" class="mb-3" alt="modernize-img" />
+              <img src="{{asset('assets/backend/images/svgs/icon-briefcase.svg')}}" width="50" height="50" class="mb-3" alt="modernize-img" />
               <p class="fw-semibold fs-3 text-warning mb-1">Clients</p>
               <h5 class="fw-semibold text-warning mb-0">3,650</h5>
             </div>
@@ -31,7 +31,7 @@
         <div class="card border-0 zoom-in bg-info-subtle shadow-none">
           <div class="card-body">
             <div class="text-center">
-              <img src="./assets/images/svgs/icon-mailbox.svg" width="50" height="50" class="mb-3" alt="modernize-img" />
+              <img src="{{asset('assets/backend/images/svgs/icon-mailbox.svg')}}" width="50" height="50" class="mb-3" alt="modernize-img" />
               <p class="fw-semibold fs-3 text-info mb-1">Projects</p>
               <h5 class="fw-semibold text-info mb-0">356</h5>
             </div>
@@ -42,7 +42,7 @@
         <div class="card border-0 zoom-in bg-danger-subtle shadow-none">
           <div class="card-body">
             <div class="text-center">
-              <img src="./assets/images/svgs/icon-favorites.svg" width="50" height="50" class="mb-3" alt="modernize-img" />
+              <img src="{{asset('assets/backend/images/svgs/icon-favorites.svg')}}" width="50" height="50" class="mb-3" alt="modernize-img" />
               <p class="fw-semibold fs-3 text-danger mb-1">Events</p>
               <h5 class="fw-semibold text-danger mb-0">696</h5>
             </div>
@@ -53,7 +53,7 @@
         <div class="card border-0 zoom-in bg-success-subtle shadow-none">
           <div class="card-body">
             <div class="text-center">
-              <img src="./assets/images/svgs/icon-speech-bubble.svg" width="50" height="50" class="mb-3" alt="modernize-img" />
+              <img src="{{asset('assets/backend/images/svgs/icon-speech-bubble.svg')}}" width="50" height="50" class="mb-3" alt="modernize-img" />
               <p class="fw-semibold fs-3 text-success mb-1">Payroll</p>
               <h5 class="fw-semibold text-success mb-0">$96k</h5>
             </div>
@@ -64,7 +64,7 @@
         <div class="card border-0 zoom-in bg-info-subtle shadow-none">
           <div class="card-body">
             <div class="text-center">
-              <img src="./assets/images/svgs/icon-connect.svg" width="50" height="50" class="mb-3" alt="modernize-img" />
+              <img src="{{asset('assets/backend/images/svgs/icon-connect.svg')}}" width="50" height="50" class="mb-3" alt="modernize-img" />
               <p class="fw-semibold fs-3 text-info mb-1">Reports</p>
               <h5 class="fw-semibold text-info mb-0">59</h5>
             </div>
@@ -271,7 +271,7 @@
           <div class="card-body">
             <div class="d-flex align-items-center mb-7 pb-2">
               <div class="me-3 pe-1">
-                <img src="./assets/images/profile/user-2.jpg" class="shadow-warning rounded-2" alt="modernize-img" width="72" height="72" />
+                <img src="{{asset('assets/backend/images/profile/user-2.jpg')}}" class="shadow-warning rounded-2" alt="modernize-img" width="72" height="72" />
               </div>
               <div>
                 <h5 class="fw-semibold fs-5 mb-2">
@@ -284,22 +284,22 @@
               <ul class="hstack mb-0">
                 <li class="ms-n8">
                   <a href="javascript:void(0)" class="me-1">
-                    <img src="./assets/images/profile/user-2.jpg" class="rounded-circle border border-2 border-white" width="44" height="44" alt="modernize-img" />
+                    <img src="{{asset('assets/backend/images/profile/user-2.jpg')}}" class="rounded-circle border border-2 border-white" width="44" height="44" alt="modernize-img" />
                   </a>
                 </li>
                 <li class="ms-n8">
                   <a href="javascript:void(0)" class="me-1">
-                    <img src="./assets/images/profile/user-3.jpg" class="rounded-circle border border-2 border-white" width="44" height="44" alt="modernize-img" />
+                    <img src="{{asset('assets/backend/images/profile/user-3.jpg')}}" class="rounded-circle border border-2 border-white" width="44" height="44" alt="modernize-img" />
                   </a>
                 </li>
                 <li class="ms-n8">
                   <a href="javascript:void(0)" class="me-1">
-                    <img src="./assets/images/profile/user-4.jpg" class="rounded-circle border border-2 border-white" width="44" height="44" alt="modernize-img" />
+                    <img src="{{asset('assets/backend/images/profile/user-4.jpg')}}" class="rounded-circle border border-2 border-white" width="44" height="44" alt="modernize-img" />
                   </a>
                 </li>
                 <li class="ms-n8">
                   <a href="javascript:void(0)" class="me-1">
-                    <img src="./assets/images/profile/user-5.jpg" class="rounded-circle border border-2 border-white" width="44" height="44" alt="modernize-img" />
+                    <img src="{{asset('assets/backend/images/profile/user-5.jpg')}}" class="rounded-circle border border-2 border-white" width="44" height="44" alt="modernize-img" />
                   </a>
                 </li>
               </ul>
@@ -318,7 +318,7 @@
             </h5>
             <p class="fs-3 mb-3 text-white">Overview 2023</p>
             <div class="text-center mt-3">
-              <img src="./assets/images/backgrounds/piggy.png" class="img-fluid" alt="modernize-img" />
+              <img src="{{asset('assets/backend/images/backgrounds/piggy.png')}}" class="img-fluid" alt="modernize-img" />
             </div>
           </div>
           <div class="card mx-2 mb-2 mt-n2">
@@ -442,7 +442,7 @@
                     <td class="ps-0">
                       <div class="d-flex align-items-center">
                         <div class="me-2 pe-1">
-                          <img src="./assets/images/profile/user-3.jpg" class="rounded-circle" width="40" height="40" alt="modernize-img" />
+                          <img src="{{asset('assets/backend/images/profile/user-3.jpg')}}" class="rounded-circle" width="40" height="40" alt="modernize-img" />
                         </div>
                         <div>
                           <h6 class="fw-semibold mb-1">Sunil Joshi</h6>
@@ -466,7 +466,7 @@
                     <td class="ps-0">
                       <div class="d-flex align-items-center">
                         <div class="me-2 pe-1">
-                          <img src="./assets/images/profile/user-5.jpg" class="rounded-circle" width="40" height="40" alt="modernize-img" />
+                          <img src="{{asset('assets/backend/images/profile/user-5.jpg')}}" class="rounded-circle" width="40" height="40" alt="modernize-img" />
                         </div>
                         <div>
                           <h6 class="fw-semibold mb-1">John Deo</h6>
@@ -490,7 +490,7 @@
                     <td class="ps-0">
                       <div class="d-flex align-items-center">
                         <div class="me-2 pe-1">
-                          <img src="./assets/images/profile/user-6.jpg" class="rounded-circle" width="40" height="40" alt="modernize-img" />
+                          <img src="{{asset('assets/backend/images/profile/user-6.jpg')}}" class="rounded-circle" width="40" height="40" alt="modernize-img" />
                         </div>
                         <div>
                           <h6 class="fw-semibold mb-1">Nirav Joshi</h6>
@@ -514,7 +514,7 @@
                     <td class="ps-0">
                       <div class="d-flex align-items-center">
                         <div class="me-2 pe-1">
-                          <img src="./assets/images/profile/user-7.jpg" class="rounded-circle" width="40" height="40" alt="modernize-img" />
+                          <img src="{{asset('assets/backend/images/profile/user-7.jpg')}}" class="rounded-circle" width="40" height="40" alt="modernize-img" />
                         </div>
                         <div>
                           <h6 class="fw-semibold mb-1">Yuvraj Sheth</h6>
@@ -538,7 +538,7 @@
                     <td class="border-0 ps-0">
                       <div class="d-flex align-items-center">
                         <div class="me-2 pe-1">
-                          <img src="./assets/images/profile/user-8.jpg" class="rounded-circle" width="40" height="40" alt="modernize-img" />
+                          <img src="{{asset('assets/backend/images/profile/user-8.jpg')}}" class="rounded-circle" width="40" height="40" alt="modernize-img" />
                         </div>
                         <div>
                           <h6 class="fw-semibold mb-1">Micheal Doe</h6>

@@ -1159,6 +1159,7 @@
   <script src="{{asset('assets/backend/js/dashboards/dashboard.js')}}"></script>
 
   {{-- meanmbah wadah js baru dan akan di panggil ketika dibutuhkan --}}
+  @include('sweetalert::alert')
   @yield('js')
   @stack('scripts')
 </body>
