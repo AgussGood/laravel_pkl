@@ -7,6 +7,7 @@ use App\Http\Controllers\BackendController;
 use App\Http\Middleware\Admin;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\MyController;
+use App\Http\Controllers\CartCOntroller;
 
 
 Route::get('/',[FrontendController::class,'index']);
@@ -15,38 +16,28 @@ Route::get('/product', [FrontendController::class, 'product']);
 Route::get('/cart', [FrontendController::class, 'cart']);
 
 
-// Route::get('/', function () {
-//     return view('layouts.frontend');
-// });
+//route guest (tamu) /member
+Route::get('/', [FrontendController::class, 'index']);
+Route::get('/product', [FrontendController::class, 'product'])->name('product.index');
+Route::get('/product/{product}', [FrontendController::class, 'singleProduct'])
+    ->name('product.show');
+Route::get('/product/category/{slug}', [FrontendController::class, 'filterByCategory'])
+    ->name('product.filter');
+Route::get('/search', [FrontendController::class, 'search'])->name('product.search');
+Route::get('/about', [FrontendController::class, 'about']);
 
-// // route basic
-// Route::get('about', function () {
-//     return 'ini Halaman About';
-// });
+//cart
+Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+Route::post('/add-to-cart/{product}', [CartController::class, 'addToCart'])->name('cart.add');
+Route::put('/cart/update/{id}', [CartController::class, 'updatecart'])->name('cart.update');
+Route::delete('/cart/{id}', [CartController::class, 'remove'])->name('cart.remove');
 
-// Route::get('profile', function () {
-//     return view('profile');
-// });
+//orders
+Route::get('/checkout', [CartController::class, 'checkout'])->name('cart.checkout');
+Route::get('/orders', [CartController::class, 'index'])->name('orders.index');
+Route::get('/orders/{id}', [CartController::class, 'show'])->name('orders.show');
 
-// //route parameter (ditandai dengan {} )
-// Route::get('produk/{namaProduk}', function ($a) {
-//     return 'Saya Membeli <b>' . $a . '</b>';
-// });
 
-// Route::get('beli/{barang}/{jumlah}', function ($a, $b) {
-//     return view('beli', compact('a', 'b'));
-// });
-
-// //route optional parameter
-// Route::get('kategori/{namaKategori?}', function ($nama = null) {
-//     if ($nama) {
-//         return 'Anda Memilih Kategori: ' . $nama;
-//     } else {
-//         return 'Anda Belum Memilih Kategori!';
-//     }
-// });
-
-//latihan
 Route::get('promo/{namabarang?}/{kode?}', function ($barang = null, $kode = null) {
     return view('promo', compact('barang', 'kode'));
 });
@@ -66,7 +57,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 //route untuk admin/backend
-Route::group(['prefix'=>'admin','middleware'=>['auth', Admin::class]], function() {
+Route::group(['prefix'=>'admin', 'as' => 'backend.' ,'middleware'=>['auth', Admin::class]], function() {
     Route::get('/',[BackendController::class, 'index']);
     //crud
     Route::resource('/category', CategoryController::class);

@@ -53,7 +53,7 @@
                     </div>
 
                     <div class="mt-4">
-                        <a href="{{ route('product.index') }}" class="btn btn-sm btn-secondary">
+                        <a href="{{ route('backend.product.index') }}" class="btn btn-sm btn-secondary">
                             <i class="fas fa-arrow-left"></i> Kembali
                         </a>
                     </div>

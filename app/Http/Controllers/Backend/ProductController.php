@@ -60,7 +60,7 @@ class ProductController extends Controller
 
         $product->save();
         toast('Data berhasil disimpan', 'success');
-        return redirect()->route('product.index');
+        return redirect()->route('backend.product.index');
     }
 
     public function show(string $id)
@@ -113,7 +113,7 @@ class ProductController extends Controller
 
         $product->save();
         toast('Data berhasil disimpan', 'success');
-        return redirect()->route('product.index');
+        return redirect()->route('backend.product.index');
     }
 
     public function destroy(string $id)
@@ -122,6 +122,6 @@ class ProductController extends Controller
         Storage::disk('public')->delete($product->image);
         $product->delete();
         toast('Data berhasil dihapus', 'success');
-        return redirect()->route('product.index');
+        return redirect()->route('backend.product.index');
     }
 }

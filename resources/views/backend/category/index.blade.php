@@ -10,7 +10,7 @@
             <div class="card">
                 <div class="card-header bg-secondary">
                     Data Category
-                    <a href="{{ route('category.create') }}" class="btn btn-info btn-sm" style="float: right;">
+                    <a href="{{ route('backend.category.create') }}" class="btn btn-info btn-sm" style="float: right;">
                         Tambah
                     </a>
                 </div>
@@ -32,9 +32,9 @@
                                     <td>{{$data->name}}</td>
                                     <td>{{$data->slug}}</td>
                                     <td>
-                                        <a href="{{ route('category.edit',$data->id) }}"
+                                        <a href="{{ route('backend.category.edit',$data->id) }}"
                                             class="btn btn-sm btn-warning">Edit</a>
-                                        <a href="{{ route('category.destroy',$data->id) }}" 
+                                        <a href="{{ route('backend.category.destroy',$data->id) }}" 
                                             class="btn btn-sm btn-danger" 
                                             data-confirm-delete="true">Delete</a>
                                     </td>

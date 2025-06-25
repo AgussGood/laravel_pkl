@@ -8,7 +8,7 @@
                     Tambah Category
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('category.store') }}" method="post">
+                    <form action="{{ route('backend.category.store') }}" method="post">
                         @csrf
                         <div class="mb-2">
                             <label for="">Nama Kategori</label>
