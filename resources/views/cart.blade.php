@@ -40,7 +40,7 @@
                                     <tr>
                                         <td class="cartarea__product__thumbnail">
                                             <a href="#">
-                                                <img src="{{ Storage::exists($item->product->image) ? Storage::url($item->product->image) : asset('assets/frontend/img/grid/grid__1.png') }}"
+                                                <img src="{{ Storage::url($item->product->image)}}"
                                                     alt="{{ $item->product->name }}" width="80">
                                             </a>
                                         </td>

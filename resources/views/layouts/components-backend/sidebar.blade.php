@@ -4,8 +4,8 @@
       <!-- ---------------------------------- -->
       <div class="brand-logo d-flex align-items-center justify-content-between">
         <a href="./main/index.html" class="text-nowrap logo-img">
-          <img src="./assets/backend/images/logos/dark-logo.svg" class="dark-logo" alt="Logo-Dark" />
-          <img src="./assets/backend/images/logos/light-logo.svg" class="light-logo" alt="Logo-light" />
+          <img src="{{ asset('assets/backend/images/logos/dark-logo.svg')}}" class="dark-logo" alt="Logo-Dark" />
+          <img src="{{ asset('assets/backend/images/logos/light-logo.svg')}}" class="light-logo" alt="Logo-light" />
         </a>
         <a href="javascript:void(0)" class="sidebartoggler ms-auto text-decoration-none fs-5 d-block d-xl-none">
           <i class="ti ti-x"></i>
@@ -25,7 +25,7 @@
           <!-- Dashboard -->
           <!-- ---------------------------------- -->
           <li class="sidebar-item">
-            <a class="sidebar-link" href="" id="get-url" aria-expanded="false">
+            <a class="sidebar-link" href=" {{ route('backend.category.index')}}" aria-expanded="false">
               <span>
                 <i class="ti ti-aperture"></i>
               </span>
@@ -33,11 +33,19 @@
             </a>
           </li>
           <li class="sidebar-item">
-            <a class="sidebar-link" href="./main/index2.html" aria-expanded="false">
+            <a class="sidebar-link" href=" {{ route('backend.product.index')}}" aria-expanded="false">
               <span>
                 <i class="ti ti-shopping-cart"></i>
               </span>
               <span class="hide-menu">Product</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href=" {{ route('backend.orders.index')}}" aria-expanded="false">
+              <span>
+                <i class="ti ti-aperture"></i>
+              </span>
+              <span class="hide-menu">Order</span>
             </a>
           </li>
           <!-- ---------------------------------- -->
@@ -162,7 +170,7 @@
       <div class="fixed-profile p-3 mx-4 mb-2 bg-secondary-subtle rounded mt-3">
         <div class="hstack gap-3">
           <div class="john-img">
-            <img src="./assets/backend/images/profile/user-1.jpg" class="rounded-circle" width="40" height="40" alt="modernize-img" />
+            <img src="{{ asset('assets/backend/images/profile/user-1.jpg')}}" class="rounded-circle" width="40" height="40" alt="modernize-img" />
           </div>
           <div class="john-title">
             <h6 class="mb-0 fs-4 fw-semibold">{{Auth::user()->name}}</h6>

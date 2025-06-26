@@ -8,6 +8,9 @@ use App\Http\Middleware\Admin;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\MyController;
 use App\Http\Controllers\CartCOntroller;
+use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\Backend\OrderController as OrdersController;
 
 
 Route::get('/',[FrontendController::class,'index']);
@@ -34,8 +37,15 @@ Route::delete('/cart/{id}', [CartController::class, 'remove'])->name('cart.remov
 
 //orders
 Route::get('/checkout', [CartController::class, 'checkout'])->name('cart.checkout');
-Route::get('/orders', [CartController::class, 'index'])->name('orders.index');
-Route::get('/orders/{id}', [CartController::class, 'show'])->name('orders.show');
+Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
+Route::get('/orders/{id}', [OrderController::class, 'show'])->name('orders.show');
+
+//review
+Route::post('/product/{product}/review', [ReviewController::class, 'store'])
+    ->middleware('auth')->name('review.store');
+
+Auth::routes();
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
 Route::get('promo/{namabarang?}/{kode?}', function ($barang = null, $kode = null) {
@@ -62,4 +72,7 @@ Route::group(['prefix'=>'admin', 'as' => 'backend.' ,'middleware'=>['auth', Admi
     //crud
     Route::resource('/category', CategoryController::class);
     Route::resource('/product', ProductController::class);
+    Route::resource('/orders', OrdersController::class);
+    Route::put('/orders/{id}/status', [OrdersController::class, 'updateStatus'])
+        ->name('orders.updateStatus');
 });
