@@ -44,7 +44,7 @@
           <div class="minicart__footer">
               <div class="minicart__subtotal">
                   <span class="subtotal__title">Subtotal:</span>
-                  <span class="subtotal__amount">Rp {{ number_format($item->product->price, 0, ',','.') }}</span>
+                  <span class="subtotal__amount">Rp {{ number_format($total, 0, ',','.') }}</span>
               </div>
               <div class="minicart__button">
                   <a href="{{ route('cart.index')}}" class="default__button">View Cart</a>

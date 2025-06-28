@@ -105,7 +105,7 @@
                         <nav>
                             <ul>
                                 <li><a href="{{ route('product.index')}}">Product</a> </li> 
-                                <li><a href="about.html">About</a> </li>
+                                <li><a href="{{ url('/about') }}">About</a> </li>
                                 <li><a href="{{ route('cart.index')}}">Cart</a> </li>
                             </ul>
                         </nav>
@@ -376,15 +376,32 @@
         </div>
         <div class="setting__wrap__list__inner">
             <ul>
+                @auth
                 <li>
-                    <a href="login.html">Login</a>
+                    <a href="{{ route('orders.index') }}">My Orders</a>
                 </li>
                 <li>
-                    <a href="cart.html">Cart</a>
+                    <a href="{{ route('cart.index') }}">Cart</a>
                 </li>
                 <li>
-                    <a href="wishlist.html">Wishlist</a>
+                    <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form-2').submit();">
+                        Logout
+                    </a>
                 </li>
+                <form id="logout-form-2" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
+                @else
+                <li>
+                    <a href="{{ route('login') }}">Login</a>
+                </li>
+                <li>
+                    <a href="{{ route('cart.index') }}">Cart</a>
+                </li>
+                <li>
+                    <a href="{{ route('register') }}">Create Account</a>
+                </li>
+                @endauth
             </ul>
         </div>
     </div>

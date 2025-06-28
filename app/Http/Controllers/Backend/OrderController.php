@@ -19,15 +19,16 @@ class OrderController extends Controller
         return view('backend.order.index', compact('orders'));
     }
 
-    public function show()
+    public function show($id)
     {
         $order = Order::with('user','products')->findOrFail($id);
         return view('backend.order.show', compact('order'));
     }
 
-    public function destroy()
+    public function destroy($id)
     {
         $order = Order::findOrFail($id);
+        $order->products()->detach();
         $order->delete();
         toast('Pesanan berhasil dihapus', 'success');
         return redirect()->route('backend.orders.index');
@@ -35,7 +36,7 @@ class OrderController extends Controller
 
     public function updateStatus(Request $request, $id)
     {
-        $request->validated([
+        $request->validate([
             'status' => 'required|in:pending,success,cancel',
         ]);
 
